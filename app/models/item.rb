@@ -14,8 +14,8 @@ class Item < ApplicationRecord
 
   validates :image, :name, :explain, :category_id, :state_id, :burden_id, :prefecture_id, :delivery_id, :price, :user, presence: true
   validates :category_id, :state_id, :burden_id, :prefecture_id, :delivery_id, numericality: { other_than: 1 }
+  validates :price, numericality: { only_integer: true, message: '半角数字でお願いします。'}
   validates :price, inclusion: {in: 300..9999999, message: '¥300~¥9.999,999でお願いします'}
-  validates :price, format: {with: /\A[0-9]+\z/, message: '半角数字でお願いします。'}
 end
 
 
