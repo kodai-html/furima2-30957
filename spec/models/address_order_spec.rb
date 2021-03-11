@@ -55,6 +55,11 @@ RSpec.describe AddressOrder, type: :model do
         @address.valid?
         expect(@address.errors.full_messages).to include("Number can't be blank")
       end
+      it "tokenが空では登録できないこと" do
+        @order.token = nil
+        @order.valid?
+        expect(@order.errors.full_messages).to include("Token can't be blank")
+      end
     end
   end
 end
