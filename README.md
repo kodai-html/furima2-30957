@@ -17,7 +17,6 @@
 
 - has_many :items
 - has_many :orders
-
 ## Items テーブル
 
 | Column        | Type     | Options          |
@@ -54,7 +53,7 @@
 
 | Column        | Type      | Options           |
 | ------------- | -------   | -----------       |
-| postal_code   | string    | null: false       | 
+| postal_code   | string    | null: false       |
 | prefecture_id | integer   | null: false       |
 | municipality  | string    | null: false       |
 | address       | string    | null: false       |
