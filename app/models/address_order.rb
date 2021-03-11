@@ -9,7 +9,7 @@ class AddressOrder
     validates :prefecture_id, numericality: { other_than: 1 }
     validates :municipality
     validates :address
-    validates :number, format: { with: /\A\d{10,11}\z/, message: 'ハイフンなしでお願いします。'}
+    validates :number, format: { with: /\A\d{10,11}\z/, message: '半角数字12字未満、ハイフンなしでお願いします。'}
     validates :token
   end
 
