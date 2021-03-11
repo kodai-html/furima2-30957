@@ -8,7 +8,6 @@ class OrdersController < ApplicationController
 
   def create
     @address_order = AddressOrder.new(address_order_params)
-    #Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
     if @address_order.valid?
       pay_item
       @address_order.save
